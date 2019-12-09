@@ -1,0 +1,60 @@
+# Project definitions (do not edit)
+Task: dawgs
+scorer: Ayaan
+date: Dec5
+
+# Project path (change when moving around)
+project_path: /Users/ayaanesmail/Desktop/DeepLabCut/conda-environments/dawgs-Ayaan-2019-12-05
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /Users/ayaanesmail/Desktop/DogVid. /Blam.mp4:
+    crop: 0, 1920, 0, 1080
+  /Users/ayaanesmail/Desktop/DogVid. /Dog#5.mp4:
+    crop: 0, 1920, 0, 1080
+bodyparts:
+- head
+- tail
+- paw1
+- paw2
+- paw3
+- paw4
+start: 0
+stop: 1
+numframes2pick: 20
+
+# Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - objectA
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.1
+dotsize: 12
+alphavalue: 0.7
+colormap: jet
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+resnet:
+snapshotindex: -1
+batch_size: 8
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+default_net_type: resnet_50
+default_augmenter: default
